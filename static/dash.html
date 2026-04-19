@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="header">
+    <h1>Real-Time Leaderboard</h1>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h3>Submit New Score</h3>
+        <input type="number" id="score" placeholder="Enter Score">
+        <button onclick="submitScore()">Submit to Redis</button>
+    </div>
+
+    <div class="card">
+        <h3>Global Rankings</h3>
+        <button onclick="getLeaderboard()">Refresh List</button>
+        <ul id="leaderboardList"></ul>
+    </div>
+</div>
+
+<script src="/dash.js"></script>
+</body>
+</html>
